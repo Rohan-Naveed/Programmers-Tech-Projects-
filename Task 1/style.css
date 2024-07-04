@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #131313;
+  --primary-color: #00ffee;
+  --text-color: white;
+}
+
+body {
+  margin: auto;
+}
+
+.banner {
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+nav {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner nav h1 {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.banner nav h1:hover span {
+  text-shadow: 10px 5px 15px var(--primary-color);
+}
+
+.banner nav span {
+  color: var(--primary-color);
+  text-shadow: 0px 0px 30px var(--primary-color);
+  transition: 0.5s;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.links a:link,
+.links a:visited {
+  position: relative;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.links a:hover,
+.links a:active {
+  color: var(--primary-color);
+}
+
+.links a::after {
+  content: " ";
+  background: var(--primary-color);
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  left: 0%;
+  bottom: -20%;
+  transition: 0.75s;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
