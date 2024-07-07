@@ -6,46 +6,56 @@
     <title>Personal Potfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="banner">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <header>
       <nav>
         <div class="title">
-          <h1>Rohan <span>Naveed</span></h1>
+          <a
+            ><span class="whiteText">Rohan</span>
+            <span class="customText">Naveed</span></a
+          >
         </div>
 
         <div class="links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Skills</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
+    </header>
 
-      <!-- <div class="content">
-        <div class="heroText">
-          <h1>Hi, its <span>Rohan</span></h1>
-          <h2>I'm a <span class="typing"></span></h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
-            ipsa, corporis ab, fugit autem vero non earum minima natus.
-          </p>
-          <div class="socialIcons">
-            <1></1>
-            <2></2>
-            <3></3>
-            <4></4>
-          </div>
-          
-          <div class="btn-box">
-            <button>Button 1</button>
-            <button>Button 2</button>
-          </div>
-        
+    <div class="content">
+      <div class="heroText">
+        <h1>Hi, It's <span>Rohan.</span></h1>
+        <h2>I'm a <span class="typing"></span></h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
+          ipsa, corporis ab, fugit autem vero non earum minima natus.
+        </p>
+        <div class="socialIcons">
+          <i class="bx bxl-linkedin-square bx-border-circle"></i>
+          <i class="bx bxl-github bx-border-circle"></i>
+          <i class="bx bxl-instagram-alt bx-border-circle"></i>
         </div>
-        <div class="heroImage"></div>
-      </div> -->
+
+        <div class="btnBox">
+          <button class="cvBtn">Download CV</button>
+          <button class="skillsBtn">See My Skills</button>
+        </div>
+      </div>
+
+      <div class="heroImage">
+        <img src="Images/PFP-2.jpg" alt="author-pfp" />
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
