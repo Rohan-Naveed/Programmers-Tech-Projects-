@@ -17,33 +17,43 @@ body {
   margin: auto;
 }
 
-.banner {
-  height: 100vh;
+/* TOPIC Navbar */
+
+header {
+  height: 15vh;
+  width: 100%;
+  padding: 20px 30px;
   background-color: var(--bg-color);
 }
 
 nav {
-  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 15px 15px -19px var(--primary-color);
 }
 
-.banner nav h1 {
+header nav .title {
   font-size: 30px;
   cursor: pointer;
   text-transform: uppercase;
-  color: var(--text-color);
+  color: white;
+  font-weight: bold;
+  transition: 0.25s;
 }
 
-.banner nav h1:hover span {
-  text-shadow: 10px 5px 15px var(--primary-color);
-}
-
-.banner nav span {
+header nav .title .customText {
   color: var(--primary-color);
   text-shadow: 0px 0px 30px var(--primary-color);
   transition: 0.5s;
+}
+
+header nav .title:hover {
+  transform: translateY(-10%);
+}
+
+header nav .title:hover .customText {
+  text-shadow: 10px 5px 15px var(--primary-color);
 }
 
 .links {
@@ -72,12 +82,139 @@ nav {
   width: 0%;
   position: absolute;
   left: 0%;
-  bottom: -20%;
+  bottom: -10%;
   transition: 0.75s;
 }
 
 .links a:hover::after {
   width: 100%;
+}
+
+.links .active::after {
+  content: " ";
+  background: var(--primary-color);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  bottom: -10%;
+  transition: 0.75s;
+}
+
+/* TOPIC Content */
+
+.content {
+  padding-left: 30px;
+  height: 85vh;
+  background-color: var(--bg-color);
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.content .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content .heroText h1 {
+  color: var(--text-color);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.content .heroText span {
+  color: var(--primary-color);
+}
+
+.content .heroText h2 {
+  color: var(--text-color);
+  margin-bottom: 25px;
+}
+
+.typing {
+  color: var(--text-color);
+}
+
+.content .heroText p {
+  color: var(--text-color);
+  margin-bottom: 25px;
+}
+
+.content .heroText .socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.content .heroText i {
+  font-size: 22px;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.content .heroText i:hover {
+  color: var(--second-bg-color);
+  background: var(--primary-color);
+  transform: scale(1.2) translateY(-15%);
+}
+
+.content .heroText .btnBox {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 18px;
+}
+
+.content .heroText .btnBox .cvBtn {
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 100px;
+  transition: 0.25s;
+}
+
+.content .heroText .btnBox .cvBtn:hover {
+  box-shadow: 0px 0px 15px var(--primary-color);
+  transform: scale(1.1);
+}
+
+.skillsBtn {
+  color: var(--primary-color);
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 100px;
+  transition: 0.25s;
+}
+
+.skillsBtn:hover {
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px var(--primary-color);
+}
+
+.content .heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .heroImage img {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  transition: 0.25s;
+}
+
+.content .heroImage img:hover {
+  box-shadow: 0px 0px 50px var(--primary-color);
 }
 
 @media (max-width: 768px) {
