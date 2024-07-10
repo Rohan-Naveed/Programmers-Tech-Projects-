@@ -4,6 +4,24 @@
   box-sizing: border-box;
   border: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgb(27, 27, 27);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #05c1b5;
 }
 
 :root {
@@ -11,6 +29,7 @@
   --second-bg-color: #131313;
   --primary-color: #00ffee;
   --text-color: white;
+  --secondary-color: #525151;
 }
 
 body {
@@ -113,10 +132,8 @@ header nav .title:hover .customText {
   grid-template-columns: 50% 50%;
 }
 
-.content .heroText {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.content .heroText span {
+  color: var(--primary-color);
 }
 
 .content .heroText h1 {
@@ -124,22 +141,21 @@ header nav .title:hover .customText {
   font-weight: bold;
   margin-bottom: 15px;
 }
-.content .heroText span {
-  color: var(--primary-color);
-}
 
 .content .heroText h2 {
   color: var(--text-color);
   margin-bottom: 25px;
 }
 
-.typing {
-  color: var(--text-color);
-}
-
 .content .heroText p {
   color: var(--text-color);
   margin-bottom: 25px;
+}
+
+.content .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .content .heroText .socialIcons {
@@ -150,16 +166,15 @@ header nav .title:hover .customText {
   margin-bottom: 25px;
 }
 
-.content .heroText i {
+.content .heroText .socialIcons i {
   font-size: 22px;
   color: var(--primary-color);
   border-color: var(--primary-color);
-
   cursor: pointer;
   transition: 0.25s;
 }
 
-.content .heroText i:hover {
+.content .heroText .socialIcons i:hover {
   color: var(--second-bg-color);
   background: var(--primary-color);
   transform: scale(1.2) translateY(-15%);
@@ -167,9 +182,13 @@ header nav .title:hover .customText {
 
 .content .heroText .btnBox {
   display: flex;
-
   justify-content: start;
   gap: 18px;
+}
+
+.content .heroText .btnBox i {
+  color: var(--bg-color);
+  font-size: 25px;
 }
 
 .content .heroText .btnBox .cvBtn {
@@ -178,6 +197,11 @@ header nav .title:hover .customText {
   padding: 10px 20px;
   border: 1px solid var(--primary-color);
   border-radius: 100px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   transition: 0.25s;
 }
 
@@ -186,16 +210,17 @@ header nav .title:hover .customText {
   transform: scale(1.1);
 }
 
-.projectsBtn {
+.content .heroText .btnBox .seeProjectsBtn {
   color: var(--primary-color);
   background-color: transparent;
   padding: 10px 20px;
   border: 1px solid var(--primary-color);
   border-radius: 100px;
+  text-decoration: none;
   transition: 0.25s;
 }
 
-.projectsBtn:hover {
+.content .heroText .btnBox .seeProjectsBtn:hover {
   color: var(--bg-color);
   background-color: var(--primary-color);
   transform: scale(1.1);
@@ -224,7 +249,7 @@ header nav .title:hover .customText {
 /* SECTION ABOUT ME */
 
 .aboutSection {
-  padding: 30px 30px 30px 30px;
+  padding: 50px 30px 30px 30px;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -289,11 +314,12 @@ header nav .title:hover .customText {
 /* SECTION Resume */
 
 .resumeSection {
-  padding: 40px 30px 10px 30px;
-  height: 100vh;
+  padding: 40px 30px 80px 30px;
+  /* height: 100vh; */
   display: grid;
   grid-template-columns: 1fr 3fr;
   row-gap: 80px;
+  box-shadow: 0px 0px 10px -2px var(--primary-color);
 }
 
 .resumeSection h1 {
@@ -303,6 +329,7 @@ header nav .title:hover .customText {
   grid-column: 1/-1;
   align-self: center;
   justify-self: center;
+  letter-spacing: 1.5px;
   margin-bottom: 15px;
 }
 
@@ -333,7 +360,7 @@ header nav .title:hover .customText {
 }
 
 .resumeSection .resumeFlex p {
-  color: rgb(82, 81, 81);
+  color: var(--secondary-color);
   margin-bottom: 25px;
 }
 
@@ -396,12 +423,12 @@ header nav .title:hover .customText {
   transform: scale(1.02) translateY(-10%);
 }
 
-.resumeSection .btnBox {
+.resumeSection .resumeBtnBox {
   align-self: center;
   justify-self: flex-start;
 }
 
-.resumeBtn {
+.resumeSection .resumeBtnBox .resumeBtn {
   color: var(--bg-color);
   background-color: var(--primary-color);
   padding: 10px 40px;
@@ -409,6 +436,96 @@ header nav .title:hover .customText {
   font-weight: bold;
 }
 
+/* SECTION Projects */
+
+.projectSection {
+  padding: 40px 30px 40px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 60px;
+  column-gap: 60px;
+}
+
+.projectSection hr {
+  margin-top: 5px;
+  border: 1px solid var(--primary-color);
+}
+
+.projectSection h1 {
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: bold;
+  grid-column: 1/-1;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+}
+
+.projectSection .projectFlex h2 {
+  color: var(--text-color);
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.projectSection .projectFlex h3 {
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.projectSection .projectFlex p {
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+}
+
+.projectSection .projectFlex ul {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+  list-style: none;
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+.projectSection .projectFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.projectSection .projectFlex .projectLinkBox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 5px 15px 5px;
+}
+
+.projectSection .projectFlex .projectLinkBox i {
+  font-size: 32px;
+  color: var(--text-color);
+  transition: 0.25s;
+}
+
+.projectSection .projectFlex .projectLinkBox i:hover {
+  transform: translateY(-10%);
+  color: var(--primary-color);
+  border: 1.5px solid var(--primary-color);
+}
+
+.projectSection .projectSection .projectBtnBox {
+  align-self: center;
+  justify-self: flex-start;
+}
+
+.projectSection .projectBtn {
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  padding: 10px 40px;
+  border-radius: 40px;
+  font-weight: bold;
+}
 @media (max-width: 768px) {
   nav {
     display: block;
