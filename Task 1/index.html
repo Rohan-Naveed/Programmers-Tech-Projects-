@@ -14,7 +14,7 @@
   <body>
     <!-- SECTION Navbar -->
 
-    <header>
+    <header id="homeSection">
       <nav>
         <div class="title">
           <a
@@ -24,10 +24,10 @@
         </div>
 
         <div class="links">
-          <a href="#home" class="active">Home</a>
-          <a href="#about">About</a>
-          <a href="#resume">Resume</a>
-          <a href="#projects">Projects</a>
+          <a href="#homeSection" class="active">Home</a>
+          <a href="#aboutSection">About</a>
+          <a href="#resumeSection">Resume</a>
+          <a href="#projectSection">Projects</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -35,7 +35,7 @@
 
     <!-- SECTION Banner -->
 
-    <div class="content">
+    <div class="content" id="contentSection">
       <div class="heroText">
         <h1>Hi, It's <span>Rohan.</span></h1>
         <h2>I'm a <span class="typing"></span></h2>
@@ -44,14 +44,26 @@
           ipsa, corporis ab, fugit autem vero non earum minima natus.
         </p>
         <div class="socialIcons">
-          <i class="bx bxl-linkedin-square bx-border-circle"></i>
-          <i class="bx bxl-github bx-border-circle"></i>
-          <i class="bx bxl-instagram-alt bx-border-circle"></i>
+          <a
+            href="https://www.linkedin.com/in/rohan-naveed-8350522b5/"
+            target="_blank"
+            ><i class="bx bxl-linkedin-square bx-border-circle"></i
+          ></a>
+          <a href="https://github.com/Rohan-Naveed" target="_blank"
+            ><i class="bx bxl-github bx-border-circle"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/its_me_rohan49/?hl=en"
+            target="_blank"
+            ><i class="bx bxl-instagram-alt bx-border-circle"></i
+          ></a>
         </div>
 
         <div class="btnBox">
-          <button class="cvBtn">Download CV</button>
-          <button class="projectsBtn">See My Projects</button>
+          <a href="#" class="cvBtn"
+            >Download CV <i class="bx bx-download"></i
+          ></a>
+          <a href="#projectSection" class="seeProjectsBtn">See My Projects</a>
         </div>
       </div>
 
@@ -62,7 +74,7 @@
 
     <!-- SECTION About -->
 
-    <section class="aboutSection">
+    <section class="aboutSection" id="aboutSection">
       <div class="aboutText">
         <h1>~ About Me</h1>
         <p>
@@ -100,10 +112,10 @@
 
     <!-- SECTION Resume -->
 
-    <section class="resumeSection">
+    <section class="resumeSection" id="resumeSection">
       <h1>My Resume</h1>
 
-      <div class="btnBox">
+      <div class="resumeBtnBox">
         <button class="resumeBtn">Experience</button>
       </div>
 
@@ -135,7 +147,7 @@
         </div>
       </div>
 
-      <div class="btnBox">
+      <div class="resumeBtnBox">
         <button class="resumeBtn">Education</button>
       </div>
 
@@ -176,7 +188,7 @@
         </div>
       </div>
 
-      <div class="btnBox">
+      <div class="resumeBtnBox">
         <button class="resumeBtn">Skills</button>
       </div>
 
@@ -212,6 +224,104 @@
     </section>
 
     <!-- SECTION Projects -->
+
+    <section class="projectSection" id="projectSection">
+      <h1>My Projects</h1>
+
+      <div class="projectFlex">
+        <video controls>
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <h2>01</h2>
+        <h3>Nexus Dispatch Website</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error harum
+          neque omnis expedita obcaecati fuga, atque incidunt, distinctio odit
+          ab modi in quaerat voluptatum placeat. Ipsum libero explicabo iusto
+          tenetur
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Bootstrap</li>
+        </ul>
+
+        <hr />
+
+        <div class="projectLinkBox">
+          <a href="#" target="_blank"
+            ><i class="bx bxl-github bx-border-circle"></i
+          ></a>
+          <a href="#" target="_blank"
+            ><i class="bx bx-link bx-border-circle"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="projectFlex">
+        <video controls>
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <h2>02</h2>
+        <h3>Personal Portfolio</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error harum
+          neque omnis expedita obcaecati fuga, atque incidunt, distinctio odit
+          ab modi in quaerat voluptatum placeat. Ipsum libero explicabo iusto
+          tenetur
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Bootstrap</li>
+        </ul>
+
+        <hr />
+
+        <div class="projectLinkBox">
+          <a href="#" target="_blank"
+            ><i class="bx bxl-github bx-border-circle"></i
+          ></a>
+          <a href="#" target="_blank"
+            ><i class="bx bx-link bx-border-circle"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="projectFlex">
+        <video controls>
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <h2>03</h2>
+        <h3>Responsive Website</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error harum
+          neque omnis expedita obcaecati fuga, atque incidunt, distinctio odit
+          ab modi in quaerat voluptatum placeat. Ipsum libero explicabo iusto
+          tenetur
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Bootstrap</li>
+        </ul>
+
+        <hr />
+
+        <div class="projectLinkBox">
+          <a href="#" target="_blank"
+            ><i class="bx bxl-github bx-border-circle"></i
+          ></a>
+          <a href="#" target="_blank"
+            ><i class="bx bx-link bx-border-circle"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
     <!-- SECTION Contact -->
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
