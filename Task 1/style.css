@@ -444,6 +444,7 @@ header nav .title:hover .customText {
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 60px;
   column-gap: 60px;
+  box-shadow: 0px 0px 10px -2px var(--primary-color);
 }
 
 .projectSection hr {
@@ -526,6 +527,155 @@ header nav .title:hover .customText {
   border-radius: 40px;
   font-weight: bold;
 }
+
+/* SECTION Contact */
+
+.contactSection {
+  padding: 40px 30px 40px 30px;
+}
+
+.contactSection h1 {
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.contactSection form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contactSection form .inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contactSection form .inputContainer i {
+  padding: 10px 20px;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border-top: 1px solid var(--primary-color);
+  border-left: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
+  border-radius: 10px 0px 0px 10px;
+}
+
+.contactSection form .inputContainer .inputField {
+  padding: 10px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 100%;
+  border-radius: 0px 10px 10px 0px;
+  outline: none;
+}
+
+.contactSection form .inputContainer .textAreaIcon {
+  height: 150px;
+  padding: 10px 17px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactSection form .inputContainer .inputField:focus {
+  border: 1px solid var(--primary-color);
+}
+
+.contactSection form .inputContainer .inputFieldName::placeholder {
+  transform: translateX(145px);
+}
+.contactSection form .inputContainer .inputFieldPhone::placeholder {
+  transform: translateX(129px);
+}
+.contactSection form .inputContainer .inputFieldEmail::placeholder {
+  transform: translateX(157px);
+}
+
+.contactSection form .inputContainer .inputField:focus::placeholder {
+  color: transparent;
+}
+
+.contactSection form .inputContainer .textArea {
+  height: 150px;
+  width: 100%;
+  padding: 8px 20px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 0px 10px 10px 0px;
+  outline: none;
+}
+
+.contactSection form .inputContainer .textArea::-webkit-scrollbar {
+  width: 4px;
+  height: 0px;
+}
+
+.contactSection form .inputContainer .textArea::-webkit-scrollbar-corner {
+  display: none;
+}
+
+.contactSection form .inputContainer .textArea::-webkit-resizer {
+  display: none;
+}
+
+.contactSection form .inputContainer .textArea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgb(27, 27, 27);
+}
+
+.contactSection form .inputContainer .textArea::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.contactSection form .inputContainer .textArea::-webkit-scrollbar-thumb:hover {
+  background-color: #05c1b5;
+}
+
+.contactSection form .inputContainer .textArea:focus {
+  border: 1px solid var(--primary-color);
+}
+
+.contactSection form .inputContainer .textArea:focus::placeholder {
+  color: transparent;
+}
+
+.contactSection form .inputContainer .textArea::placeholder {
+  transform: translate(135px, 57px);
+}
+
+.contactSection form .submitBtn {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border-radius: 13px;
+  width: 200px;
+  cursor: pointer;
+  margin-top: 10px;
+  opacity: 0.9;
+  transition: 0.25s;
+}
+
+.contactSection form .submitBtn:hover {
+  box-shadow: 0px 0px 10px var(--primary-color);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
   nav {
     display: block;
