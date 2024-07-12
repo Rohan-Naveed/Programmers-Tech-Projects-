@@ -1,7 +1,5 @@
 "use strict";
 
-console.log(10);
-
 var typed = new Typed(".typing", {
   strings: ["Front-End Developer.", "Web Designer.", "Programmer."],
   typeSpeed: 175,
@@ -10,20 +8,17 @@ var typed = new Typed(".typing", {
 });
 
 const form = document.querySelector("form");
-const senderFullName = document.getElementById("name").textContent;
-const senderPhone = document.getElementById("phone").textContent;
-const senderEmail = document.getElementById("email").textContent;
-const senderMessage = document.getElementById("message").textContent;
+const senderFullName = document.getElementById("name");
+const senderPhone = document.getElementById("phone");
+const senderEmail = document.getElementById("email");
+const senderMessage = document.getElementById("message");
 
-console.log(form);
-
-let msgString = `Sender's Full Name : ${senderFullName} <br>
-                  Sender's Phone : ${senderPhone} <br>
-                  Sender's Email : ${senderEmail} <br>
-                  Sender's Message : ${senderMessage}`;
-
-console.log(msgString);
 function sendEmail() {
+  let msgString = `<h1>Sender's Full Name :</h1>  ${senderFullName.value} <br>
+                  <h1>Sender's Phone :</h1>  ${senderPhone.value} <br>
+                  <h1>Sender's Email :</h1>  ${senderEmail.value} <br>
+                  <h1>Sender's Message :</h1>  ${senderMessage.value}`;
+
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "rohan.naveed626899@gmail.com",
