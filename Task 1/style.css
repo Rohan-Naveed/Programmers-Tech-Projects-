@@ -190,9 +190,7 @@ header nav .title:hover .customText {
   font-size: 25px;
 }
 
-.contentSection .heroText .btnBox .cvBtn:link,
-.contentSection .heroText .btnBox .cvBtn:visited,
-.contentSection .heroText .btnBox .cvBtn:active {
+.contentSection .heroText .btnBox .cvBtn {
   color: var(--bg-color);
   background-color: var(--primary-color);
   padding: 10px 20px;
@@ -870,6 +868,10 @@ footer {
   #aboutSection .aboutSection .aboutImg img {
     width: 240px;
     height: 240px;
+    border-radius: 20%;
+    filter: none;
+    transform: scale(1);
+    box-shadow: 0px 5px 10px var(--primary-color);
   }
 
   #aboutSection .statsContainer {
@@ -889,58 +891,17 @@ footer {
 
   .contentSection {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .contentSection .heroText span {
-    color: var(--primary-color);
-  }
-
-  .contentSection .heroText h1 {
-    color: var(--text-color);
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-
-  .contentSection .heroText h2 {
-    color: var(--text-color);
-    margin-bottom: 25px;
+    grid-template-columns: 1.2fr 1fr;
   }
 
   .contentSection .heroText p {
-    color: var(--text-color);
-    margin-bottom: 25px;
+    font-size: 14px;
   }
 
   .contentSection .heroText {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-  }
-
-  .contentSection .heroText .socialIcons {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 18px;
-    margin-bottom: 25px;
-  }
-
-  .contentSection .heroText .socialIcons i {
-    font-size: 22px;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-    cursor: pointer;
-    transition: 0.25s;
-  }
-
-  .contentSection .heroText .socialIcons i:hover {
-    color: var(--second-bg-color);
-    background: var(--primary-color);
-    transform: scale(1.2) translateY(-15%);
   }
 
   .contentSection .heroText .btnBox {
@@ -951,53 +912,23 @@ footer {
 
   .contentSection .heroText .btnBox i {
     color: var(--bg-color);
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .contentSection .heroText .btnBox .cvBtn {
-    color: var(--bg-color);
-    background-color: var(--primary-color);
-    padding: 10px 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 100px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: 0.25s;
-  }
-
-  .contentSection .heroText .btnBox .cvBtn:hover {
-    box-shadow: 0px 0px 15px var(--primary-color);
-    transform: scale(1.1);
+    text-align: center;
+    font-size: 13px;
+    display: inline-block;
+    gap: 5px;
   }
 
   .contentSection .heroText .btnBox .seeProjectsBtn {
-    color: var(--primary-color);
-    background-color: transparent;
-    padding: 10px 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 100px;
-    text-decoration: none;
-    transition: 0.25s;
-  }
-
-  .contentSection .heroText .btnBox .seeProjectsBtn:hover {
-    color: var(--bg-color);
-    background-color: var(--primary-color);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px var(--primary-color);
-  }
-
-  .contentSection .heroImage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 13px;
   }
 
   .contentSection .heroImage img {
-    display: none;
+    width: 220px;
+    height: 220px;
   }
 
   .contentSection .heroImage img:hover {
@@ -1020,5 +951,178 @@ footer {
   .title {
     text-align: center;
     margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  /* SECTION Navbar */
+
+  header nav .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  header nav .title a {
+    font-size: 20px;
+  }
+
+  header nav .links a {
+    font-size: 12px;
+  }
+
+  /* SECTION Banner */
+
+  .contentSection {
+    display: flex;
+    padding: 0px 15px 0px 15px;
+  }
+
+  .contentSection .heroText h1 {
+    font-size: 25px;
+  }
+
+  .contentSection .heroText h2 {
+    font-size: 16px;
+  }
+
+  .contentSection .heroText p {
+    font-size: 12px;
+  }
+
+  .contentSection .heroText {
+    align-items: center;
+  }
+
+  .contentSection .heroText .socialIcons {
+    gap: 18px;
+  }
+
+  .contentSection .heroText .socialIcons i {
+    font-size: 16px;
+  }
+
+  .contentSection .heroText .btnBox {
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+  }
+
+  .contentSection .heroText .btnBox .cvBtn {
+    text-align: center;
+    font-size: 11px;
+    display: flex;
+    gap: 5px;
+    padding: 5px 10px;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn {
+    font-size: 12px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contentSection .heroImage img {
+    display: none;
+  }
+
+  /* SECTION About */
+
+  #aboutSection {
+    padding: 25px 15px 20px 15px;
+  }
+
+  #aboutSection .aboutSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #aboutSection .aboutSection .aboutText h1 {
+    font-size: 25px;
+  }
+
+  #aboutSection .aboutSection .aboutText p {
+    font-size: 12px;
+  }
+
+  #aboutSection .aboutSection .aboutImg img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #aboutSection .statsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+  }
+
+  #aboutSection .statsContainer .statBox h2 {
+    font-size: 28px;
+  }
+
+  #aboutSection .statsContainer .statBox p {
+    font-size: 11px;
+  }
+
+  /* SECTION Resume */
+
+  .resumeSection {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px 30px 15px;
+    gap: 50px;
+  }
+
+  .resumeSection h1 {
+    font-size: 25px;
+  }
+
+  .resumeSection .resumeFlex h2 {
+    font-size: 16px;
+  }
+
+  .resumeSection .resumeFlex .resumeBox h4 {
+    font-size: 14px;
+  }
+
+  .resumeSection .resumeFlex .resumeBox ul li {
+    font-size: 12px;
+  }
+
+  .resumeSection .resumeFlex p {
+    font-size: 12px;
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills h3 {
+    font-size: 11px;
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills i {
+    font-size: 40px;
+  }
+
+  .resumeSection .resumeFlex .resumeBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resumeSection .resumeFlex .skillsBox {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .resumeSection .resumeFlex .skillsBox .skills {
+    width: 100px;
+    height: 100px;
+  }
+
+  .resumeBtnBox {
+    display: none;
   }
 }
