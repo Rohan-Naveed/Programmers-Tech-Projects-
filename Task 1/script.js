@@ -12,6 +12,7 @@ const senderFullName = document.getElementById("name");
 const senderPhone = document.getElementById("phone");
 const senderEmail = document.getElementById("email");
 const senderMessage = document.getElementById("message");
+const allSections = document.querySelectorAll(".section");
 
 function sendEmail() {
   let msgString = `<h1>Sender's Full Name :</h1>  ${senderFullName.value} <br>
@@ -35,3 +36,24 @@ form.addEventListener("submit", (e) => {
 
   sendEmail();
 });
+
+// TOPIC Reveal section on scroll
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  console.log(entry.target);
+
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0,
+});
+
+allSections.forEach((sec) => sectionObserver.observe(sec));

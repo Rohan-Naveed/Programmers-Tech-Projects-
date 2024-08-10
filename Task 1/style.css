@@ -24,6 +24,15 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #05c1b5;
 }
 
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateX(-10rem);
+}
+
 :root {
   --bg-color: #080808;
   --second-bg-color: #131313;
@@ -35,6 +44,7 @@ body::-webkit-scrollbar-thumb:hover {
 body {
   background-color: var(--second-bg-color);
   margin: auto;
+  overflow-x: hidden;
 }
 
 /* SECTION Navbar */
