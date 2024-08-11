@@ -63,7 +63,7 @@ nav {
 }
 
 header nav .title {
-  font-size: 30px;
+  font-size: 2.5vw;
   cursor: pointer;
   text-transform: uppercase;
   color: white;
@@ -94,6 +94,7 @@ header nav .title:hover .customText {
 
 .links a:link,
 .links a:visited {
+  font-size: 1.3vw;
   position: relative;
   color: var(--text-color);
   text-decoration: none;
@@ -146,6 +147,7 @@ header nav .title:hover .customText {
 }
 
 .contentSection .heroText h1 {
+  font-size: 3.35vw;
   color: var(--text-color);
   font-weight: bold;
   margin-bottom: 15px;
@@ -153,11 +155,13 @@ header nav .title:hover .customText {
 
 .contentSection .heroText h2 {
   color: var(--text-color);
+  font-size: 2.1vw;
   margin-bottom: 25px;
 }
 
 .contentSection .heroText p {
   color: var(--text-color);
+  font-size: 1.3vw;
   margin-bottom: 25px;
 }
 
@@ -176,7 +180,7 @@ header nav .title:hover .customText {
 }
 
 .contentSection .heroText .socialIcons i {
-  font-size: 22px;
+  font-size: 1.7vw;
   color: var(--primary-color);
   border-color: var(--primary-color);
   cursor: pointer;
@@ -197,16 +201,21 @@ header nav .title:hover .customText {
 
 .contentSection .heroText .btnBox i {
   color: var(--bg-color);
-  font-size: 25px;
+  font-size: 1.6vw;
+}
+
+.contentSection .heroText button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 1vw;
 }
 
 .contentSection .heroText .btnBox .cvBtn {
   color: var(--bg-color);
   background-color: var(--primary-color);
-  padding: 10px 20px;
-  border: 1px solid var(--primary-color);
-  border-radius: 100px;
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,20 +229,35 @@ header nav .title:hover .customText {
 }
 
 .contentSection .heroText .btnBox .seeProjectsBtn {
+  position: relative;
   color: var(--primary-color);
-  background-color: transparent;
-  padding: 10px 20px;
-  border: 1px solid var(--primary-color);
-  border-radius: 100px;
-  text-decoration: none;
-  transition: 0.25s;
+  background: transparent;
+  overflow: hidden;
+  transition: 0.75s;
+}
+
+.contentSection .heroText .btnBox .seeProjectsBtn span {
+  content: " ";
+  background: #00ffee;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50px;
+  transition: 0.75s;
+}
+
+.contentSection .heroText .btnBox .seeProjectsBtn:hover span {
+  width: 100%;
 }
 
 .contentSection .heroText .btnBox .seeProjectsBtn:hover {
   color: var(--bg-color);
-  background-color: var(--primary-color);
-  transform: scale(1.1);
+  transform: scale(1);
   box-shadow: 0px 0px 15px var(--primary-color);
+  border: none;
 }
 
 .contentSection .heroImage {
@@ -270,14 +294,19 @@ header nav .title:hover .customText {
 }
 
 .aboutSection .aboutText h1 {
-  font-size: 40px;
+  font-size: 3.35vw;
   color: var(--primary-color);
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .aboutSection .aboutText p {
+  font-size: 1.3vw;
   color: var(--text-color);
+}
+.aboutSection .aboutText h1 i {
+  margin-right: 15px;
+  font-size: 3.3vw;
 }
 
 .aboutSection .aboutText {
@@ -321,14 +350,14 @@ header nav .title:hover .customText {
 
 .statsContainer .statBox h2 {
   color: var(--text-color);
-  font-size: 45px;
+  font-size: 4vw;
   font-weight: bold;
 }
 
 .statsContainer .statBox p {
   padding: 0 10px;
   color: var(--text-color);
-  font-size: 18px;
+  font-size: 1.4vw;
 }
 
 /* SECTION Resume */
@@ -343,7 +372,7 @@ header nav .title:hover .customText {
 }
 
 .resumeSection h1 {
-  font-size: 40px;
+  font-size: 3.35vw;
   color: var(--primary-color);
   font-weight: bold;
   grid-column: 1/-1;
@@ -355,24 +384,24 @@ header nav .title:hover .customText {
 
 .resumeSection .resumeFlex h2 {
   color: var(--text-color);
-  font-size: 30px;
+  font-size: 2.15vw;
   font-weight: 600;
 }
 
 .resumeSection .resumeFlex .resumeBox h3 {
   color: var(--primary-color);
-  font-size: 11px;
+  font-size: 1.1vw;
 }
 
 .resumeSection .resumeFlex .resumeBox h4 {
   color: var(--text-color);
-  font-size: 25px;
+  font-size: 1.7vw;
 }
 
 .resumeSection .resumeFlex .resumeBox ul li {
   color: var(--text-color);
   margin-bottom: 3px;
-  font-size: 13px;
+  font-size: 1vw;
 }
 
 .resumeSection .resumeFlex .resumeBox ul li::marker {
@@ -381,16 +410,17 @@ header nav .title:hover .customText {
 
 .resumeSection .resumeFlex p {
   color: var(--secondary-color);
+  font-size: 1.3vw;
   margin-bottom: 25px;
 }
 
 .resumeSection .resumeFlex .skillsBox .skills h3 {
   color: var(--primary-color);
-  font-size: 15px;
+  font-size: 1.1vw;
 }
 
 .resumeSection .resumeFlex .skillsBox .skills i {
-  font-size: 100px;
+  font-size: 7vw;
   color: var(--text-color);
 }
 
@@ -450,6 +480,7 @@ header nav .title:hover .customText {
 
 .resumeSection .resumeBtnBox .resumeBtn {
   color: var(--bg-color);
+  font-size: 1.3vw;
   background-color: var(--primary-color);
   padding: 10px 40px;
   border-radius: 40px;
@@ -475,7 +506,7 @@ header nav .title:hover .customText {
 
 .projectSection h1 {
   color: var(--primary-color);
-  font-size: 40px;
+  font-size: 3.35vw;
   font-weight: bold;
   grid-column: 1/-1;
   align-self: center;
@@ -486,18 +517,19 @@ header nav .title:hover .customText {
 
 .projectSection .projectFlex h2 {
   color: var(--text-color);
-  font-size: 45px;
+  font-size: 2.9vw;
   font-weight: bold;
 }
 
 .projectSection .projectFlex h3 {
   color: var(--text-color);
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 
 .projectSection .projectFlex p {
+  font-size: 1.3vw;
   color: var(--secondary-color);
-  margin-bottom: 5px;
+  margin-bottom: 1.3vw;
 }
 
 .projectSection .projectFlex ul {
@@ -506,7 +538,7 @@ header nav .title:hover .customText {
   gap: 15px;
   list-style: none;
   color: var(--primary-color);
-  font-size: 14px;
+  font-size: 1.1vw;
 }
 
 .projectSection .projectFlex {
@@ -525,7 +557,7 @@ header nav .title:hover .customText {
 }
 
 .projectSection .projectFlex .projectLinkBox i {
-  font-size: 32px;
+  font-size: 2.5vw;
   color: var(--text-color);
   transition: 0.25s;
 }
@@ -557,7 +589,7 @@ header nav .title:hover .customText {
 
 .contactSection h1 {
   color: var(--primary-color);
-  font-size: 40px;
+  font-size: 3.35vw;
   font-weight: bold;
   margin-bottom: 50px;
   letter-spacing: 1.5px;
@@ -570,7 +602,8 @@ header nav .title:hover .customText {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  max-width: 500px;
+  width: 500px;
+  min-height: 300px;
   margin: auto;
 }
 
@@ -582,6 +615,7 @@ header nav .title:hover .customText {
 }
 
 .contactSection form .inputContainer i {
+  font-size: 1.9vw;
   padding: 10px 20px;
   background-color: var(--bg-color);
   color: var(--primary-color);
@@ -603,8 +637,8 @@ header nav .title:hover .customText {
 
 .contactSection form .inputContainer .textAreaIcon {
   height: 150px;
-  padding: 10px 17px;
-  font-size: 22px;
+  padding: 10px 20px;
+  font-size: 1.9vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -615,16 +649,20 @@ header nav .title:hover .customText {
 }
 
 .contactSection form .inputContainer .inputFieldName::placeholder {
+  font-size: 1.3vw;
   transform: translateX(145px);
 }
 .contactSection form .inputContainer .inputFieldPhone::placeholder {
+  font-size: 1.3vw;
   transform: translateX(129px);
 }
 .contactSection form .inputContainer .inputFieldEmail::placeholder {
+  font-size: 1.3vw;
   transform: translateX(157px);
 }
 
 .contactSection form .inputContainer .inputField:focus::placeholder {
+  font-size: 1.3vw;
   color: transparent;
 }
 
@@ -673,6 +711,7 @@ header nav .title:hover .customText {
 }
 
 .contactSection form .inputContainer .textArea::placeholder {
+  font-size: 1.3vw;
   transform: translate(135px, 57px);
 }
 
@@ -680,7 +719,7 @@ header nav .title:hover .customText {
   padding: 10px 20px;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1.3vw;
   background-color: var(--primary-color);
   color: var(--bg-color);
   border-radius: 13px;
@@ -716,12 +755,14 @@ footer {
 
 .footerGrid .footerInfoContainer p {
   color: var(--text-color);
+  font-size: 1.3vw;
   padding: 5px 7px 5px 10px;
   border: 1px solid var(--primary-color);
   border-radius: 0px 15px 15px 0px;
 }
 
 .footerGrid .footerLinkContainer a {
+  font-size: 1.23vw;
   text-decoration: none;
   color: var(--primary-color);
   text-transform: uppercase;
@@ -734,7 +775,7 @@ footer {
 }
 
 .footerGrid .footerInfoContainer i {
-  font-size: 20px;
+  font-size: 1.57vw;
   color: var(--primary-color);
   background-color: var(--secondary-color);
   transform: scale(1.15) translateX(5px);
@@ -764,6 +805,18 @@ footer {
 @media (max-width: 768px) {
   /* SECTION Footer */
 
+  /* .footerGrid .footerInfoContainer p {
+    font-size: 15px;
+  }
+  
+  .footerGrid .footerLinkContainer a {
+    font-size: 15px;
+  }
+  
+  .footerGrid .footerInfoContainer i {
+    font-size: 18px;
+  } */
+
   footer {
     height: auto;
   }
@@ -779,19 +832,11 @@ footer {
     gap: 9px 0px;
   }
 
-  .footerGrid .footerInfoContainer p {
-    font-size: 15px;
-  }
-
-  .footerGrid .footerLinkContainer a {
-    font-size: 15px;
-  }
-
-  .footerGrid .footerInfoContainer i {
-    font-size: 18px;
-  }
-
   /* SECTION Contact */
+
+  /* .contactSection h1 {
+    font-size: 35px;
+  } */
 
   .contactSection {
     height: auto;
@@ -799,16 +844,11 @@ footer {
 
   .contactSection h1 {
     color: var(--primary-color);
-    font-size: 35px;
   }
 
   /* SECTION Project */
 
-  .projectSection {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .projectSection h1 {
+  /* .projectSection h1 {
     font-size: 35px;
   }
 
@@ -826,10 +866,14 @@ footer {
 
   .projectSection .projectFlex ul {
     font-size: 12px;
+  } */
+
+  .projectSection {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* SECTION Resume */
-
+  /* 
   .resumeSection h1 {
     font-size: 35px;
   }
@@ -853,26 +897,34 @@ footer {
   .resumeSection .resumeFlex .skillsBox .skills h3 {
     font-size: 13px;
   }
-
+  
   .resumeSection .resumeFlex .skillsBox .skills i {
     font-size: 60px;
-  }
+  } */
 
   /* SECTION About */
+
+  /* #aboutSection .aboutSection .aboutText h1 {
+    font-size: 35px;
+  }
+
+  #aboutSection .aboutSection .aboutText p {
+    font-size: 15px;
+  }
+
+  #aboutSection .statsContainer .statBox h2 {
+    font-size: 35px;
+  }
+
+  #aboutSection .statsContainer .statBox p {
+    font-size: 13px;
+  } */
 
   #aboutSection {
     height: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-
-  #aboutSection .aboutSection .aboutText h1 {
-    font-size: 35px;
-  }
-
-  #aboutSection .aboutSection .aboutText p {
-    font-size: 15px;
   }
 
   #aboutSection .aboutSection .aboutImg img {
@@ -889,23 +941,27 @@ footer {
     align-items: center;
   }
 
-  #aboutSection .statsContainer .statBox h2 {
-    font-size: 35px;
-  }
-
-  #aboutSection .statsContainer .statBox p {
-    font-size: 13px;
-  }
-
   /* SECTION Banner */
 
-  .contentSection {
-    height: 100vh;
-    grid-template-columns: 1.2fr 1fr;
+  /* .contentSection .heroText .btnBox .seeProjectsBtn {
+    font-size: 13px;
   }
 
   .contentSection .heroText p {
     font-size: 14px;
+  }
+
+  .contentSection .heroText .btnBox i {
+    font-size: 20px;
+  }
+
+  .contentSection .heroText .btnBox .cvBtn {
+    font-size: 13px;
+  } */
+
+  .contentSection {
+    height: 100vh;
+    grid-template-columns: 1.2fr 1fr;
   }
 
   .contentSection .heroText {
@@ -922,18 +978,12 @@ footer {
 
   .contentSection .heroText .btnBox i {
     color: var(--bg-color);
-    font-size: 20px;
   }
 
   .contentSection .heroText .btnBox .cvBtn {
     text-align: center;
-    font-size: 13px;
     display: inline-block;
     gap: 5px;
-  }
-
-  .contentSection .heroText .btnBox .seeProjectsBtn {
-    font-size: 13px;
   }
 
   .contentSection .heroImage img {
@@ -967,6 +1017,14 @@ footer {
 @media (max-width: 320px) {
   /* SECTION Navbar */
 
+  /* header nav .title a {
+    font-size: 20px;
+  }
+
+  header nav .links a {
+    font-size: 12px;
+  } */
+
   header nav .links {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -975,21 +1033,8 @@ footer {
     gap: 15px;
   }
 
-  header nav .title a {
-    font-size: 20px;
-  }
-
-  header nav .links a {
-    font-size: 12px;
-  }
-
   /* SECTION Banner */
-
-  .contentSection {
-    display: flex;
-    padding: 0px 15px 0px 15px;
-  }
-
+  /* 
   .contentSection .heroText h1 {
     font-size: 25px;
   }
@@ -1002,16 +1047,29 @@ footer {
     font-size: 12px;
   }
 
+  .contentSection .heroText .socialIcons i {
+    font-size: 16px;
+  }
+
+  .contentSection .heroText .btnBox .cvBtn {
+    font-size: 11px;
+  }
+
+  .contentSection .heroText .btnBox .seeProjectsBtn {
+    font-size: 12px;
+  } */
+
+  .contentSection {
+    display: flex;
+    padding: 0px 15px 0px 15px;
+  }
+
   .contentSection .heroText {
     align-items: center;
   }
 
   .contentSection .heroText .socialIcons {
     gap: 18px;
-  }
-
-  .contentSection .heroText .socialIcons i {
-    font-size: 16px;
   }
 
   .contentSection .heroText .btnBox {
@@ -1022,14 +1080,12 @@ footer {
 
   .contentSection .heroText .btnBox .cvBtn {
     text-align: center;
-    font-size: 11px;
     display: flex;
     gap: 5px;
     padding: 5px 10px;
   }
 
   .contentSection .heroText .btnBox .seeProjectsBtn {
-    font-size: 12px;
     padding: 5px 10px;
     display: flex;
     justify-content: center;
@@ -1042,21 +1098,29 @@ footer {
 
   /* SECTION About */
 
-  #aboutSection {
-    padding: 25px 15px 20px 15px;
-  }
-
-  #aboutSection .aboutSection {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #aboutSection .aboutSection .aboutText h1 {
+  /* #aboutSection .aboutSection .aboutText h1 {
     font-size: 25px;
   }
 
   #aboutSection .aboutSection .aboutText p {
     font-size: 12px;
+  }
+
+  #aboutSection .statsContainer .statBox h2 {
+    font-size: 28px;
+  }
+
+  #aboutSection .statsContainer .statBox p {
+    font-size: 11px;
+  }
+   */
+  #aboutSection {
+    padding: 25px 15px 25px 15px;
+  }
+
+  #aboutSection .aboutSection {
+    display: flex;
+    flex-direction: column;
   }
 
   #aboutSection .aboutSection .aboutImg img {
@@ -1070,24 +1134,9 @@ footer {
     row-gap: 12px;
   }
 
-  #aboutSection .statsContainer .statBox h2 {
-    font-size: 28px;
-  }
-
-  #aboutSection .statsContainer .statBox p {
-    font-size: 11px;
-  }
-
   /* SECTION Resume */
 
-  .resumeSection {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 15px 30px 15px;
-    gap: 50px;
-  }
-
-  .resumeSection h1 {
+  /* .resumeSection h1 {
     font-size: 25px;
   }
 
@@ -1113,6 +1162,13 @@ footer {
 
   .resumeSection .resumeFlex .skillsBox .skills i {
     font-size: 40px;
+  } */
+
+  .resumeSection {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px 30px 15px;
+    gap: 50px;
   }
 
   .resumeSection .resumeFlex .resumeBox {
@@ -1121,18 +1177,46 @@ footer {
   }
 
   .resumeSection .resumeFlex .skillsBox {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     row-gap: 30px;
     justify-items: center;
     align-items: center;
   }
 
   .resumeSection .resumeFlex .skillsBox .skills {
-    width: 100px;
-    height: 100px;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
   }
 
   .resumeBtnBox {
     display: none;
+  }
+
+  /* SECTION Projects */
+
+  .projectSection {
+    padding: 25px 15px 25px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectSection hr {
+    width: 100%;
+  }
+
+  .projectSection .projectFlex {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectSection .projectFlex video {
+    width: 250px;
+    height: 150px;
+  }
+
+  /* SECTION Contact */
+
+  .contactSection form {
+    width: 100%;
   }
 }
